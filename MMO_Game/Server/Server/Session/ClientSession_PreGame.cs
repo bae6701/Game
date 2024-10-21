@@ -26,9 +26,6 @@ namespace Server
             if (ServerState != PlayerServerState.ServerStateLogin)
                 return;
             // TODO : 문제가 있긴 있다
-            // - 동시에 다른 사람이 같은 UniqueId을 보낸다면?
-            // - 악의적으로 여러번 보낸다면?
-            // - 쌩뚱맞은 타이밍에 그냥 이 패킷을 보낸다면?
 
             LobbyPlayers.Clear();
 

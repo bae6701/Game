@@ -394,11 +394,6 @@ namespace Server.Game
             return cells;
         }
 
-        //Pos Cell2Pos(Vector3Int cell)
-        //{
-        //    // CellPos -> ArrayPos
-        //    return new Pos(MaxY - cell.y, cell.x - MinX);
-        //}
         Pos Cell2Pos(Vector2Int cell)
         {
             int y = MaxY - cell.y;

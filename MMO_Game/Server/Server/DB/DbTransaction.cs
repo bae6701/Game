@@ -79,7 +79,6 @@ namespace Server.DB
             if (player == null || rewardData == null || room == null)
                 return;
 
-            // TODO : 살짝 문제가 있긴하다..
             // 1) DB에다가 저장 요철
             // 2) DB저장 OK
             // 3) 메모리에 적용
@@ -109,7 +108,6 @@ namespace Server.DB
                             Item newItem = Item.MakeItem(itemDb);
                             player.Inven.Add(newItem);
 
-                            // TODO : Client Noti
                             {
                                 S_AddItem itemPacket = new S_AddItem();
                                 ItemInfo itemInfo = new ItemInfo();

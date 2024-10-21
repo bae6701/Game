@@ -6,7 +6,6 @@ namespace ServerCore
 {
 	public class RecvBuffer
 	{
-		// [r][][w][][][][][][][]
 		ArraySegment<byte> _buffer;
 		int _readPos;
 		int _writePos;

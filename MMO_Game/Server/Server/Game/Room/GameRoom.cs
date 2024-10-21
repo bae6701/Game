@@ -67,7 +67,6 @@ namespace Server.Game
             }
         }
 
-        //누군가 주기적으로 호출해야줘야 한다.
         public void Update()
         {
             Flush();
@@ -240,13 +239,6 @@ namespace Server.Game
         public void Broadcast(Vector2Int pos, IMessage packet)
         {
             List<Zone> zones = GetAdjacentZones(pos);
-            //foreach (Zone zone in zones)
-            //{
-            //    foreach (Player p in zone.Players)
-            //    {
-            //        p.Session.Send(packet);
-            //    }
-            //}
             foreach (Player p in zones.SelectMany(z => z.Players))
             {
                 int dx = p.CellPos.x - pos.x;
